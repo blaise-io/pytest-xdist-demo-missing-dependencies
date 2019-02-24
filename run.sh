@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-test -d .env || virtualenv .env
+test -d .env || virtualenv .env --python=python3
 .env/bin/pip install pytest pytest-xdist
 
 # Build an image with SSH server and Docker to mimic a remote SSH host

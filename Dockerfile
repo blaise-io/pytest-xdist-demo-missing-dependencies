@@ -3,7 +3,7 @@
 
 FROM alpine:3.9
 
-RUN apk --update add --no-cache openssh docker python3
+RUN apk --update add --no-cache python3 openssh
 
 RUN sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config
 RUN echo "root:root" | chpasswd
